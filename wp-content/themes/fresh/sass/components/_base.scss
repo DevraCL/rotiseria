@@ -1,0 +1,192 @@
+/*!
+ * Bootstrap v3.3.5 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+ img{
+    max-width: 100%;
+    height:auto;
+ }
+
+ .sticky{
+    border:1px dotted $border-color;
+    padding: 15px;
+    margin-bottom: 30px;
+ }
+.aligncenter,
+div.aligncenter {
+    display: block;
+    margin: 5px auto 5px auto;
+}
+
+.alignright {
+    @include rtl-float-right();
+    margin: 5px 0 20px 20px;
+}
+
+.alignleft {
+    @include rtl-float-left();
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignright {
+    @include rtl-float-right();
+    margin: 5px 0 20px 20px;
+}
+
+a img.alignnone {
+    margin: 5px 20px 20px 0;
+}
+
+a img.alignleft {
+    @include rtl-float-left();
+    margin: 5px 20px 20px 0;
+}
+
+a img.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
+
+.wp-caption {
+    background: #f8f8f8;
+    border: 1px solid #eee;
+    max-width: 100%;
+    margin: 0 0 20px;
+    text-align: center;
+    padding-top: 4px;
+}
+.wp-caption.alignleft {
+    margin: 5px 20px 20px 0;
+}
+
+.wp-caption.alignright {
+    margin: 5px 0 20px 20px;
+}
+.wp-caption.alignnone{
+    display: inline-block;
+}
+.wp-caption img {
+    border: 0 none;
+    height: auto;
+    margin: 0;
+    max-width: 98.5%;
+    padding: 0;
+    width: auto;
+}
+
+.wp-caption p.wp-caption-text {
+    font-size: 11px;
+    line-height: 17px;
+    margin: 0;
+    padding: 0 4px 5px;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute !important;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
+
+.screen-reader-text:focus {
+  background-color: #f1f1f1;
+  border-radius: 3px;
+  box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+  clip: auto !important;
+  color: #21759b;
+  display: block;
+  font-size: 14px;
+  font-size: 0.875rem;
+  font-weight: bold;
+  height: auto;
+  left: 5px;
+  line-height: normal;
+  padding: 15px 23px 14px;
+  text-decoration: none;
+  top: 5px;
+  width: auto;
+  z-index: 100000; /* Above WP toolbar. */
+}
+
+.nopadding{
+   padding:0!important;
+   margin:0!important;
+}
+
+.video-responsive {
+    height: 0;
+    padding-top: 0;
+    padding-bottom: 56.25%;
+    margin-bottom : 10px;
+    position: relative;
+    overflow: hidden;
+  embed,iframe,object,video{
+    top: 0;
+    left: 0;
+    position: absolute;
+        @include square(percentage(1));
+  }
+}
+
+.audio-responsive{
+  iframe{
+    @include size(percentage(1), 126px);
+  }
+}
+.links{
+  @media(min-width: $screen-lg){
+    padding:0 20px !important;
+  }
+  @media (min-width: $screen-md) and (max-width: $screen-md-max){
+      padding-left: 40px !important;
+  }
+  @media (min-width: $screen-sm) and (max-width: $screen-sm-max) {
+    padding-left: 40px !important;
+  }
+  li{
+    padding: 0 5px;
+    position: relative;
+
+    &:before{
+        content:"";
+        position: absolute;
+        width: 2px;
+        height: 10px;
+        background: $border-color;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        @include rtl-right(0);
+    }
+    a{
+      padding:15px 5px;
+      text-transform: uppercase;
+    }
+    &:first-child{
+      @include rtl-padding-left(0)
+    }
+    &:last-child{
+      &:before{
+        display: none;
+      }
+      @include rtl-padding-right(0)
+
+    }
+  }
+}
+
+.form-row {
+    @extend .form-group;
+}
+.btn-close {
+    @include border-radius(0);
+    padding: 5px 10px;
+}
+.theme-color-primary {
+  @include button-variant( $white, $theme-color-primary, $theme-color-primary);
+  @include button-size($padding-base-vertical, $padding-base-horizontal, $font-size-base, $line-height-base, $btn-border-radius-base);
+}

@@ -1,0 +1,61 @@
+//
+// Utility classes
+// --------------------------------------------------
+
+
+// Floats
+// -------------------------
+
+.clearfix {
+  @include clearfix();
+}
+.navbar-right {
+    float: left!important;
+}
+.navbar-left {
+    float: right!important;
+}
+.pull-right {
+  float: left !important;
+}
+.pull-left {
+  float: right !important;
+}
+.text-right {
+  text-align: left !important;
+}
+.text-left {
+  text-align: right !important;
+}
+.media > .pull-left {
+	margin-left: 10px;
+	margin-right: 0;
+}
+.media > .pull-right {
+	margin-left: 0;
+	margin-right: 10px;
+}
+
+// Toggling content
+// -------------------------
+
+.hide {
+  display: none !important;
+}
+.show {
+  display: block !important;
+}
+.invisible {
+  visibility: hidden;
+}
+.text-hide {
+  @include hide-text();
+}
+
+
+// For Affix plugin
+// -------------------------
+
+.affix {
+  position: fixed;
+}

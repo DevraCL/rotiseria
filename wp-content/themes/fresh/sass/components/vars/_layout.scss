@@ -1,0 +1,87 @@
+
+// Topbar
+// -------------------------
+$topbar-bg                                      : #fff !default;
+$topbar-color                                   : $theme-color-second !default;
+$topbar-border                                  : 1px dotted $border-color !default;
+$topbar-font-size                               : 13px !default;
+$topbar-icon-font-size                          : 16px !default;
+$topbar-icon-font-family                        : 'FontAwesome';
+$topbar-text-transform                          : none !default;
+$topbar-padding                            		: 10px 0 !default;
+
+//// Header
+
+$header-main-padding : 15px 0 !default;
+
+
+
+$massbottom-head-bg		 : $theme-color !default;
+$massbottom-head-padding : 6px 9px !default;
+$massbottom-head-color   : $theme-color !default;
+$massbottom-head-border-color: darken($massbottom-head-bg,4%)!default;
+
+/**
+ *
+ */
+
+ $mainmenu-bg: #222222 !default; 
+
+// Footer
+// -------------------------
+$footer-bg                                      : transparent !default;
+$footer-color                                   : #838c8c !default;
+$footer-transform                               : none !default;
+$footer-font-size                               : $font-size-base !default;
+$footer-border                                  : none !default;
+$footer-padding-top                             : 70px !default;
+$footer-padding-bottom                          : 70px !default;
+$footer-text-hightlight                         : $white !default;
+$footer-link-font-size							: $footer-font-size !default;
+$footer-column-margin                           : 0 0 25px 0 !default;
+$footer-link-color                              : $footer-color !default;
+$footer-link-hover-color                        : $theme-color !default;
+
+$footer-heading-font-size                       : 12px !default;
+$footer-heading-color                           : #3b3d40 !default;
+$footer-heading-margin                          : 0px !default;
+$footer-heading-padding                         : 0 0 20px !default;
+$footer-heading-display                         : block !default;
+$footer-heading-transform                       : none !default;
+$footer-heading-fweight                         : 700 !default;
+$footer-heading-ffamily                         : $font-family-second !default;
+
+
+$footer-list-transform                          : none !default;
+$footer-list-font-size                          : 14px !default;
+$footer-list-margin                             : 0 0 10px !default;
+$footer-list-light-height                       : 2.5 !default;
+
+
+$footer-newsletter-padding                      : 25px !default;
+$footer-newsletter-bg                           : $theme-color !default;
+$footer-newsletter-color                        : #484848 !default;
+$footer-newsletter-heading-font-size            : 18px !default;
+
+$footer-top-bg 									: transparent !default;
+$footer-top-color  								: #999999 !default;
+$footer-top-padding-top							: 12px !default;
+$footer-top-padding-bottom						: 12px !default;
+$footer-top-font-size							: 12px !default;
+$footer-top-letter-spacing						: 2px !default;
+$footer-top-border-color 						: rgba(0, 0, 0, 0.1);
+// Copyright
+// -------------------------
+
+ // Copyright
+// -------------------------
+$copyright-bg                                   : transparent!default;
+$copyright-color                                : $theme-color-second !default;
+$copyright-link-color                           : $theme-color-default !default;
+$copyright-padding-top                          : 30px !default;
+$copyright-padding-bottom                       : 70px !default;
+$copyright-font-size							: $font-size-base !default;
+$copyright-font-weight							: $font-weight-base !default;
+
+$del-font-size									: 12px !default;
+$del-color										: #999999;

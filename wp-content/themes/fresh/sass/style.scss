@@ -1,0 +1,59 @@
+/*
+Theme Name: Fresh
+Theme URI:  http://www.wpopal.com/product/fresh-wordpress-theme
+Author: WpOpal Team
+Author URI: http://www.wpopal.com
+Description: The Fresh theme for WordPress by <a href="http://www.wpopal.com">OpalTeam</a> is a fully responsive theme that looks great on any device. That's the best for any kind of online shoping sites. <a href="http://bit.ly/opalwp">Follow us on Themeforest to receive newest updates</a>
+Version: 1.0 Updated 20-Jan-2016
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: two-columns, three-columns, left-sidebar, right-sidebar, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready, accessibility-ready
+Text Domain: fresh
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+/*------------------------------------------------------------------
+[Table of contents]
+1. Utilities
+2. Base
+3. Layout
+4. Page
+5. Post
+6. Form
+7. Responsive
+8. Widget
+
+-------------------------------------------------------------------*/
+//@import "compass";
+@import "bootstrap";
+@import "components/variables";
+
+/* 1. Utilities */
+@import "components/mixins";
+
+/* 2. Base */
+@import "components/base";
+
+/* 3. Layout */
+@import "components/template-layout";
+@import "components/widget-layout";
+
+/* 8. Widget */
+@import "components/widgets";
+@import "components/nav";
+
+/* 4. Page */
+@import "components/page";
+
+/* 5. Post */
+@import "components/post-formats";
+@import "components/post-single";
+@import "components/custom-posttype";
+
+/* 6. Form */
+@import "components/elements";
+@import "components/pagebuilder";
+
+/* 7. Responsive */
+@import "components/responsive"; 

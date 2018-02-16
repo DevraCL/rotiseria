@@ -1,0 +1,111 @@
+/*
+Theme Name: fresh
+Theme URI: https://wpopal.org/themes/fresh/
+Author: WPOPAL Team
+Author URI: https://wordpress.org/
+Description: In 2014, our default theme lets you create a responsive magazine website with a sleek, modern design. Feature your favorite homepage content in either a grid or a slider. Use the three widget areas to customize your website, and change your content's layout with a full-width page template and a contributor page to show off your authors. Creating a magazine website with WordPress has never been easier.
+Version: 1.5
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, green, white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready, accessibility-ready
+Text Domain: fresh
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+/*
+Theme Name: Mode
+Theme URI: http://venusdemo.com/mode/
+Author: Opal Team
+Author URI: https://wordpress.org/
+Description: In 2015, our default theme lets you create a responsive magazine website with a sleek, modern design. Feature your favorite homepage content in either a grid or a slider. Use the three widget areas to customize your website, and change your content's layout with a full-width page template and a contributor page to show off your authors. Creating a magazine website with WordPress has never been easier.
+Version: 1.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: black, green, white, light, dark, two-columns, three-columns, left-sidebar, right-sidebar, fixed-layout, responsive-layout, custom-background, custom-header, custom-menu, editor-style, featured-images, flexible-header, full-width-template, microformats, post-formats, rtl-language-support, sticky-post, theme-options, translation-ready, accessibility-ready
+Text Domain: mode
+
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+@import "rtl/rtl";                      // RTL
+
+
+@import "bootstrap-rtl";
+@import "rtl/bootstrap/mixins";
+@import "components/variables";
+@import "components/mixins";
+
+@import "components/base";
+@import "components/template-layout";
+
+@import "components/widget-layout";
+@import "components/widgets";
+
+@import "components/nav";
+@import "components/page";
+
+
+@import "components/post-formats";
+@import "components/post-single";
+@import "components/custom-posttype";
+
+@import "components/elements";
+@import "components/pagebuilder";
+@import "components/responsive";
+@import "rtl/bootstrap/utilities"; 
+@import "rtl/bootstrap/input-groups";
+@import "rtl/bootstrap/navbar";
+
+.woocommerce div.product form.cart div.quantity,
+.woocommerce div.product form.cart .button{
+	float:right;
+}
+.single-product.woocommerce div.product form.cart div.quantity{
+	margin-left:40px;
+	margin-right:0 !important;
+}
+.single-product .summary a.compare{
+	float:right !important;
+}
+.progress-bar{
+	float: right;
+}
+.effect-v3:hover .category-caption{
+	transform: translate3d(-25px, 0px, 0px);
+}
+.search-category{
+	.input-group-btn:last-child > .btn:not(:last-child):not(.dropdown-toggle) {
+        @include border-right-radius(0px);
+        @include border-left-radius(20px);
+    }
+}
+.widget_mc4wp_form_widget{
+	.input-group{
+		.form-control:first-child  {
+            @include border-right-radius(20px);
+            @include border-left-radius(0px);
+        }
+	}
+}
+.input-group-addon:first-child {
+	 @include border-right-radius(20px);
+     @include border-left-radius(0px);
+}
+.rtl {
+	.product-block{
+		span.onsale, .product-sale-label, .sale-off {
+			 &:before {
+			 	right: auto;
+			 	left: -9px;
+			 }
+		}
+	}
+	&.kingcomposer {
+		.kc-css-5888963, .kc-css-2984764, .kc-css-559366 ,.kc-css-9354240, .kc-css-5603559 ,.kc-css-4979957{
+			background-position: right bottom;
+		}
+	}
+}

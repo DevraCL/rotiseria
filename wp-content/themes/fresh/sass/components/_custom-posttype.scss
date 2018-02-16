@@ -1,0 +1,770 @@
+/*------------------------------------*\ 
+    portfolio
+\*------------------------------------*/
+.single-portfolio {
+   .entry-title{
+      margin: 10px 0 25px;
+      .title-post{
+         text-transform: uppercase;
+         margin: 0 0 15px;
+      }
+   }
+   .created{
+      color: $light-gray;
+      font-size: 10px;
+      font-weight: 400;
+      text-transform: uppercase;
+   }
+   .single-body{
+      margin-top: $grid-gutter-width;
+   }
+   .gallery-thumb{
+      [class^="col-"]{
+         margin-bottom: 20px;
+      }
+   }
+   .format-video .content-video{
+      background: #FAFAFA;
+   }
+   .format-infomation .single-body{
+      margin-top: 0;
+      .portfolio-info{
+         margin-bottom: 30px;
+         > div{
+            padding: 10px 0;
+            border-top: 1px solid #F1F1F1;
+            &:last-child{
+               border-bottom: 1px solid #F1F1F1;
+            }
+            > span{
+               font-size: 16px;
+               font-weight: 300;
+               &:first-child{
+                  width: 90px;
+                  display: inline-block;
+                  color: #777777;
+               }
+               &:last-child{
+                  color: $black;
+               }
+            }
+         }
+         a:hover{
+            color: $theme-color;
+         }
+      }
+   }
+}
+
+
+.portfolio-masonry-entry{
+	margin-bottom: 30px;
+	&.nopadding{
+		margin-bottom: 0;
+	}
+}  
+.portfolio-slider {
+    .item {
+        img {
+            width: 100%;
+        }
+    }
+}
+//Effect portfolio
+.ih-item{
+    position: relative;
+    .info{
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        top: 0;
+        > *{
+            color: $white;
+        }
+        h3{
+            text-align: center;
+            padding: 10px;
+            font-size: $font-size-base + 1;
+        }
+        p{
+            font-style: italic;
+            position: relative;
+            color: #bbb;
+            padding: 20px 20px 20px;
+            text-align: center;
+            font-size: $font-size-base;
+        }
+    }
+}
+
+.ih-item{
+    .info{
+        @include opacity(0);
+        background: rgba(0, 0, 0, 0.5);
+        @include transition(all 0.35s);
+        @media(max-width: $screen-sm-max){
+            padding-top: 10%!important;
+        }
+        h3{
+            background: none;
+            &:hover{
+                color: $theme-color;
+            }
+        }
+        .description{
+            display: none;
+        }
+        .created, .zoom{
+            display: block!important;
+            visibility: visible!important;
+            padding: 0;
+            color: $white;
+            font-weight: 400;
+        }
+        .info-inner{
+            position: absolute;
+            top: 50%;
+            margin-top: -60px;
+            left: 0;
+            @include size(100%, auto);
+            z-index: 1;
+            h3{
+                margin: 0;
+            }
+        }
+    }
+    .fa-search {
+        background: transparent;
+        &:hover {
+            background: transparent;
+        }
+    }
+    &:hover{
+        .info{
+            @include opacity(1);
+        }    
+    }
+}
+
+.ih-item.square{
+    position: relative;
+    .info{
+        backface-visibility: hidden;
+        bottom: 0;
+        left: 0;
+        position: absolute;
+        right: 0;
+        text-align: center;
+        top: 0;
+        background: #333333;
+        color: $white;
+        > *{
+            color: $white;
+        }
+        h3{
+            text-transform: uppercase;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            background: #000;
+            margin: 30px 0 0 0;
+            font-size: $font-size-base + 1;
+        }
+        p{
+            font-style: italic;
+            position: relative;
+            color: #bbb;
+            padding: 20px 20px 20px;
+            text-align: center;
+            font-size: $font-size-base;
+        }
+    }
+}
+.ih-item.square.effect2 {
+    overflow: hidden;
+    &.colored {
+        .info {
+            background: #333333;
+            h3 {
+                background: #111111;
+            }
+        }
+    }
+    .img {
+        opacity: 1;
+        @include transition(  all .5s ease-in-out );
+        @include transform( rotate(0deg) scale(1) );
+    }
+
+    .info {
+        background: #333333;
+        visibility: hidden;
+        @include transition(  all .35s .3s ease-in-out );
+        h3 {
+            @include transform( translateY(-200px) );
+            @include transition(  all .35s .6s ease-in-out );
+        }
+
+        p {
+            @include transform( translateY(-200px) );
+            @include transition(  all .35s .5s linear );
+        }
+    }
+
+    a:hover {
+        .img {
+            @include transform( rotate(720deg) scale(0) );
+            opacity: 0;
+        }
+
+        .info {
+            visibility: visible;
+
+            h3,
+            p {
+                @include transform( translateY(0) );
+            }
+        }
+    }
+}
+
+.ih-item.square{
+    &.effect3.bottom_to_top {
+        overflow: hidden;
+        .info {
+            top: auto;
+            @include opacity(0);
+            @include transform( translateY(100%) );
+            @include transition(all 0.35s);
+        }
+        .img{
+            @include transition(all 0.35s);
+        }
+        a:hover {
+            .img {
+                @include transform( translateY(-50px) );
+                
+            }
+            .info {
+                 @include opacity(1);
+                @include transform( translateY(0) );
+            }
+        }
+    }
+}
+
+.ih-item.square.effect5 {
+    .img {
+        @include transition(  all .35s ease-in-out );
+        @include transform( scale(1) );
+    }
+
+    .info {
+    background: #000;
+        opacity: 0;
+        @include transition( all .35s ease-in-out );
+    }
+
+    a:hover {
+        .img {
+            @include transform( scale(0) );
+            @include transition-delay(0, 0);
+        }
+
+        .info {
+            visibility: visible;
+            opacity: 1;
+            @include transform( scale(1) rotate(0deg) );
+            @include transition-delay(0.3s, 0.3s);
+        }
+    }
+}
+
+.ih-item.square.effect5.left_to_right {
+    .info {
+        @include transform( scale(0) rotate(-180deg) );
+    }
+}
+
+.ih-item.square.effect6 {
+    overflow: hidden;
+    
+    .img {
+        @include transition(  all .35s ease-in-out );
+        @include transform( scale(1) );
+    }
+
+    .info {
+        background: #000;
+        visibility: hidden;
+        opacity: 0;
+        @include transition(  all .35s ease-in-out );
+        h3 {
+            @include transition(  all .35s ease-in-out );
+        }
+        p {
+            @include transition(  all .35s .1s linear );
+        }
+    }
+
+    a:hover {
+        .img {
+            @include transform( scale(1.2) );
+        }
+
+        .info {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+.ih-item.square.effect6.bottom_to_top {
+    .info {
+        h3 {
+            @include transform( translateY(100%) );
+        }
+
+        p {
+            @include transform( translateY(100%) );
+        }
+    }
+
+    a:hover {
+        .info {
+            h3,
+            p {
+                @include transform( translateY(0) );
+            }            
+        }
+    }
+}
+
+.ih-item.square.effect7 {
+    overflow: hidden;
+    .img {
+        @include transition(  all .35s ease-in-out );
+        @include transform( scale(1) );
+    }
+
+    .info {
+        background: #000;
+        visibility: hidden;
+        opacity: 0;
+        @include transition(  all .35s ease-in-out );
+        h3 {
+            @include transform( scale(4) );
+            @include transition(  all .35s .1s ease-in-out );
+        }
+        p {
+            @include transform( scale(5) );
+            @include transition(  all .35s .3s linear );
+        }
+    }
+
+    a:hover {
+        .img {
+            @include transform( scale(1.2) );
+        }
+
+        .info {
+            visibility: visible;
+            opacity: 1;
+
+            h3,
+            p {
+                @include transform( scale(1) );
+            }
+        }
+    }
+}
+
+.ih-item.square.effect8 {
+    overflow: hidden;
+    .img {
+        opacity: 1;
+        @include transition(  all .35s ease-in-out );
+    }
+
+    .info {
+        visibility: hidden;
+        opacity: 0;
+        @include transition(  all .35s ease-in-out );
+
+        h3 {
+            @include transition(  all .35s .1s ease-in-out );
+        }
+
+        p {
+            @include transition(  all .35s .15s linear );
+        }
+    }
+
+    a:hover {
+        .img {
+            opacity: 0;
+        }
+
+        .info {
+            visibility: visible;
+            opacity: 1;
+
+            h3,
+            p {
+            }
+        }
+    }
+}
+
+// -------------------------
+.ih-item.square.effect8.scale_up {
+    .img {
+        @include transform( scale(1) );
+    }
+
+    .info {
+        @include transform( scale(0) );
+
+        h3,
+        p {
+            @include transform( scale(0) );
+        }
+    }
+
+    a:hover {
+        .img {
+            @include transform( scale(5) );
+        }
+
+        .info {
+            @include transform( scale(1) );
+
+            h3,
+            p {
+                @include transform( scale(1) );
+            }
+        }
+    }
+}
+
+.ih-item.square.effect10 {
+    overflow: hidden;
+    .img {
+        @include transition(  all .35s ease-in-out );
+    }
+
+    .info {
+        visibility: hidden;
+        opacity: 0;
+        @include transition(  all .35s ease-in-out );
+    }
+
+    a:hover {
+        .info {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+// -------------------------
+.ih-item.square.effect10.left_to_right {
+    .img {
+        @include transform( translateX(0) );
+    }
+
+    .info {
+        @include transform( translateX(-100%) );
+    }
+
+    a:hover {
+        .img {
+            @include transform( translateX(100%) );
+        }
+
+        .info {
+            @include transform( translateX(0) );
+        }
+    }
+}
+
+.ih-item.square.effect12 {
+    overflow: hidden;
+    .img {
+        @include transition( all .35s ease-in );
+    }
+
+    .info {
+        background: #000;
+        visibility: hidden;
+        opacity: 0;
+        @include transition( all .35s ease-in );
+        h3 {
+            @include transition( all .35s ease-in );
+        }
+        p {
+            @include transition( all .35s ease-in );
+        }
+    }
+
+    a:hover {
+        .info {
+            visibility: visible;
+            opacity: 1;
+            @include transition-delay( 0.2s, 0.2s );
+
+            h3 {
+                @include transition-delay( 0.3s, 0.3s );
+            }
+
+            p {
+                @include transition-delay( 0.25s, 0.25s );
+            }
+        }
+    }
+}
+ 
+// -------------------------
+.ih-item.square.effect12.left_to_right {
+    .info {
+        @include transform( translate(-460px, -100px) rotate(-180deg) );
+
+        h3 {
+            @include transform( translateY(-100px) );
+        }
+
+        p {
+            @include transform( translateX(-300px) rotate(-90deg) );
+        }
+    }
+
+    a:hover {
+        .info {
+            @include transform( translate(0px, 0px) );
+
+            h3 {
+                @include transform( translateY(0px) );
+            }
+
+            p {
+                @include transform( translateX(0px) rotate(0deg) );
+            }            
+        }
+    }
+}
+ 
+.ih-item.square.effect14 {
+    overflow: hidden;
+    .img {
+        opacity: 1;
+        @include transition(  all .35s ease-in-out );
+    }
+
+    .info {
+        visibility: hidden;
+        opacity: 0;
+        pointer-events: none;
+        @include transform( scale(.5) );
+        @include transition( all .35s ease .2s);
+    }
+
+    a:hover {
+        .img {
+            opacity: 0;
+            pointer-events: none;
+            @include transform( scale(.5) );
+        }
+
+        .info {
+            visibility: visible;
+            opacity: 1;
+            @include transform( scale(1) );
+        }
+    }
+}
+
+// -------------------------
+.ih-item.square.effect14.left_to_right {
+    .img {
+        @include transform( translateX(0) rotate(0) );
+    }
+
+    a:hover {
+        .img {
+            @include transform( translateX(100%) rotate(180deg) );
+        }
+    }
+}
+
+.ih-item.square.effect15 {
+    overflow: hidden;
+    @include perspective(900px);
+    .img {
+        opacity: 1;
+        @include transition(  all .4s ease-in-out );
+    }
+
+    .info {
+        opacity: 0;
+        @include transition(  all .35s ease-in-out .3s);
+    }
+
+    a:hover {
+        .img {
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .info {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}
+
+// -------------------------
+.ih-item.square.effect15.left_to_right {
+    .img {
+        @include transform( rotateY(0) );
+        @include transform-origin( 100%, 50% );
+    }
+
+    .info {
+        @include transform( rotateY(90deg) );
+        @include transform-origin( 0%, 50% );
+    }
+
+    a:hover {
+        .img {
+            @include transform( rotateY(-90deg) );
+        }
+
+        .info {
+            @include transform( rotateY(0) );
+        }
+    }
+}
+.ih-item.square.effect16{
+    .info{
+        @include opacity(0);
+        background: $theme-color;
+        @include transition(all 0.35s);
+        @media(max-width: $screen-sm-max){
+            padding-top: 10px!important;
+        }
+        @media(max-width: $screen-xs-max){
+          display: none!important;
+        }
+        h3{
+            background: none;
+            a{
+              color: $black!important;
+              @include transition(all 0.35s);
+              &:hover{
+                color: $white!important;
+              }
+            }
+        }
+        .description{
+            display: none;
+        }
+        .created, .zoom{
+            display: block!important;
+            visibility: visible!important;
+            padding: 0;
+            color: $white;
+            font-weight: 400;
+        }
+        .zoom i{
+          border: 1px solid $white!important;
+        }
+        .info-inner{
+            position: absolute;
+            top: 50%;
+            margin-top: -60px;
+            left: 0;
+            @include size(100%, auto);
+            z-index: 1;
+            h3{
+                margin: 0;
+            }
+        }
+    }
+    &:hover{
+        .info{
+            @include opacity(1);
+        }     
+    }
+}
+
+.ih-item.square.effect16{
+    .info{
+        @include opacity(0);
+        background: $theme-color;
+        @include transition(all 0.35s);
+        @media(max-width: $screen-sm-max){
+            padding-top: 10px!important;
+        }
+        @media(max-width: $screen-xs-max){
+          display: none!important;
+        }
+        h3{
+            background: none;
+            a{
+              color: $black!important;
+              @include transition(all 0.35s);
+              &:hover{
+                color: $white!important;
+              }
+            }
+        }
+        .description{
+            display: none;
+        }
+        .created, .zoom{
+            display: block!important;
+            visibility: visible!important;
+            padding: 0;
+            color: $white;
+            font-weight: 400;
+        }
+        .zoom i{
+          border: 1px solid $white!important;
+        }
+        .info-inner{
+            position: absolute;
+            top: 50%;
+            margin-top: -60px;
+            left: 0;
+            @include size(100%, auto);
+            z-index: 1;
+            h3{
+                margin: 0;
+            }
+        }
+    }
+    &:hover{
+        .info{
+            @include opacity(1);
+        }     
+    }
+}
+//jqzoom
+
+.zoomLens {
+    width: 50px !important;
+    height : 50px !important;
+    &:before {
+        content: "\f067";
+        font-family: "FontAwesome";
+        height: 50px;
+        width: 50px;
+        text-align: center;
+        line-height: 48px;
+        font-size: 20px;
+        display: block;
+        font-weight: 400;
+    }
+}

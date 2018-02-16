@@ -1,0 +1,77 @@
+// Core variables and mixins
+@import "bootstrap/variables";
+@import "bootstrap/mixins";
+
+@import "components/mixins";
+@import "components/variables";
+
+@import "woocommerce/variables";
+@import "woocommerce/widget";
+@import "woocommerce/styles";  
+@import "woocommerce/form";  
+
+.rtl {
+	&.single-product{
+		&.woocommerce {
+	        div.product{
+	        	p.cart {
+	        		float: right;
+	        		margin-right: 0;
+	        		margin-left: 20px;
+	        	}
+	        }
+	    }
+	}	
+	&.woocommerce div.product .woocommerce-tabs ul.tabs li{
+		padding-left: 0;
+		padding-right: 30px;
+		&:last-child {
+			a {
+				border: 0;
+			}
+		}
+		> a {
+			padding-left: 30px;
+			padding-right: 0px;
+			border-left: 1px solid $border-color;
+			border-right: 0;
+		}
+	} 
+}
+/*$media (min-width: 992px) and (max-width: 1199px)*/
+@media (min-width: $screen-md) and (max-width: $screen-md-max){	    
+    .product-block {
+    	padding: 0;
+    	.name {
+	        min-height: 35px;
+	        overflow: hidden;
+	    }
+    }
+    .product-block-list .groups {
+    	clear: both;
+	    width: 100%;
+	    padding-top: 10px;
+    }
+}
+@media (max-width: $screen-sm-max) {
+	.single-product .single_add_to_cart_button {
+		margin-bottom: 15px;
+	}
+}
+/*$media (max-width: 767px) {*/
+@media (max-width: $screen-xs-max) {
+    
+}
+/*$media (max-width: 480px) {*/
+@media (max-width: $screen-phone) {
+    
+  
+}
+@media (max-width: 320px) {
+    .woocommerce div.product .woocommerce-tabs ul.tabs li{
+        padding: 8px 0;
+        > a {
+            border: 0;
+        }
+    }
+} 

@@ -1,0 +1,70 @@
+/* block */
+
+.#{$block-selector} {
+        position: relative;
+    .#{$block-heading-selector}{
+        font-size: $block-module-heading-font-size;
+        font-weight: $block-module-heading-font-weight;
+        text-transform: $block-module-heading-transform;
+        font-family: $block-module-heading-font-family;
+        color: $block-module-heading-color;
+        padding: $block-module-heading-padding;
+        margin-bottom: $block-module-heading-margin;
+        text-align: center;
+        border-bottom: 1px dotted $border-color;       
+    }
+    .#{$block-content-selector} {
+    }
+    /* block styles */
+    &.nopadding{
+        .#{$block-content-selector}{
+            padding:0;
+            margin: 0;
+        }
+    }
+    
+}
+
+/**
+ * Styling Css for widgets in Sidebar Left Static
+ */
+.#{$block-prefix}-static{
+    .#{$block-heading-selector}{
+        color:#FFFFFF;
+    }
+    ul li { border:none }
+}
+
+.sidebar{
+    .widget{
+        margin-bottom: 50px;
+        .widget-title,.widgettitle{
+            font-size: 24px;            
+            padding: 0 0 30px;
+            margin-bottom: 20px;
+            @include rtl-text-align-left();           
+        }
+        
+        &.widget_product_categories {
+            .widget-title,.widgettitle{
+                margin-bottom: 0;
+            }
+        }
+    }
+    .postform {
+        margin-top: 30px;
+    }
+}
+
+/**
+ * Styling Css for widgets in footer layout
+ */
+.opal-footer{
+    .#{$block-selector} {
+        .#{$block-heading-selector}{
+            font-size: $footer-heading-font-size;
+            color: $footer-heading-color;
+            @include rtl-text-align-left();
+        }
+    }
+}
